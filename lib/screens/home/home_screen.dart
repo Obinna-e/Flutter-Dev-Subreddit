@@ -48,12 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
       result = await _connectivity.checkConnectivity();
 
       if (result != ConnectivityResult.none) {
-        _posts = await ApiService().fetchPost(prefs, false);
+        _posts = await ApiService().fetchPost(prefs, true);
         setState(() {
           isLoading = false;
         });
       } else {
-        _posts = await ApiService().fetchPost(prefs, true);
+        _posts = await ApiService().fetchPost(prefs, false);
         setState(() {
           isLoading = false;
         });
