@@ -18,12 +18,12 @@ class Post {
   });
 
   factory Post.fromJson(Map<String, dynamic> json) => Post(
-        title: json["title"] as String,
-        likes: json["ups"] as int,
-        dislikes: json["downs"] as int,
-        score: json["score"] as int,
-        author: json["author"] as String,
-        description: json["selftext"] as String,
-        commentCount: json["num_comments"] ?? 0,
+        title: json["title"],
+        likes: json["ups"],
+        dislikes: json["downs"],
+        score: json["score"],
+        author: json["author"],
+        description: json["selftext"] ?? '',
+        commentCount: json["num_comments"],
       );
 }
