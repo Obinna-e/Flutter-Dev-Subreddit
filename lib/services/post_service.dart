@@ -30,6 +30,7 @@ class ApiService {
         return posts;
       } catch (e) {
         print(e);
+        return posts;
       }
     }
 
